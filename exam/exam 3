@@ -1,0 +1,22 @@
+# start
+from shlex import join
+
+
+def camel_to_hyphen(text: str ):
+    latters = ''
+    for i in text:
+        if i.isupper():
+            latters += '-' +i.lower()
+        else:
+            latters += i
+    return latters
+
+print (camel_to_hyphen("helloPython"))
+print (camel_to_hyphen("myVariableName"))
+print (camel_to_hyphen("python"))
+print (camel_to_hyphen("aBigTest"))
+
+
+
+
+# stop

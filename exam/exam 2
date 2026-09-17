@@ -1,0 +1,12 @@
+# start
+def special_percentile(precent : int, numbers : list):
+    '''' find the percentile of a list of numbers '''
+    numbers.sort()
+    length = len(numbers)
+    place = 0.01 * precent * length
+    return numbers[int(place)]
+
+print(special_percentile(25, [40 , 10 , 30 , 20]))
+print(special_percentile(25, [50 , 10 , 40 , 30 , 20]))
+print(special_percentile(50, [9 , 1 , 7 , 3]))
+# stop

@@ -1,0 +1,14 @@
+# start
+l = []
+while True:
+    words = input("Enter words: ")
+    if words == "quit":
+        break
+    l.append(words)
+for word in l:
+    if word [::-1] in l:
+        print('reversed match found')
+        break
+else:
+    print('no reversed match found')
+# stop

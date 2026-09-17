@@ -1,0 +1,24 @@
+# start
+ranks = []
+while True:
+    try:
+        grade = int(input('Enter a grade: '))
+        if grade == -999:
+            if len(ranks) < 10:
+                print('need at least 10 valid ranks. keep entering')
+                continue
+            else:
+                break
+        if grade < 1 or grade > 5:
+            print('not in range , skip')
+            continue
+        if grade >= 1 and grade <= 5:
+            ranks.append(grade)
+
+    except ValueError:
+        print('invalid input, skip')
+        continue
+print (f'Number of valid ranks: {len(ranks)}')
+print (f'average rank: {sum(ranks)/len(ranks)}')
+print (f'max rank: {max(ranks)}')
+# stop
